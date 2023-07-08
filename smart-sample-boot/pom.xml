@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.smart</groupId>
+        <artifactId>smart-sample</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>smart-sample-boot</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- 至少保留一个业务模块依赖-->
+
+        <!-- 业务模块1(可选)-->
+        <dependency>
+            <groupId>com.smart</groupId>
+            <artifactId>smart-sample-module1</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>smart-sample</finalName>
+        <plugins>
+            <!-- SpringBoot Maven Plugin 将程序打包成jar包的方式启动 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.13</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.smart.sample.DistApplication</mainClass>
+                    <!-- 打包时排除scope为system的包 -->
+                    <includeSystemScope>false</includeSystemScope>
+                    <!-- jvm启动时通过-Dloader.path加载包，必须指定layout为ZIP，否则-Dloader.path无效 -->
+                    <layout>ZIP</layout>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

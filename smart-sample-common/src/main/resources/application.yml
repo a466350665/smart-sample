@@ -1,0 +1,52 @@
+server:
+  port: 9988
+
+logging:
+  config: classpath:${LOGGING_CONFIG_PATH:log4j2.xml}
+  level:
+    root: info
+    com.smart: debug
+
+spring:
+  application:
+    name: ${APPLICATION_NAME:smart-sample}
+
+#  jackson: #JSON转换日期默认格式
+#    date-format: ${DATE-FORMAT:yyyy-MM-dd HH:mm:ss}
+#    time-zone: GMT+8
+
+#  config: #导入模块配置文件,支持多模块逗号分隔
+#    import: ${CONFIG_IMPORT:optional:classpath:module/module1/}
+
+#  messages: #国际化文件目录,支持多模块逗号分隔
+#    basename: ${MESSAGES_BASENAME:i18n/messages,module/module1/i18n/messages}
+
+  messages: #国际化文件目录
+    basename: ${MESSAGES_BASENAME:i18n/messages}
+
+  datasource: #数据库连接(可选，统一使用动态数据源方式)
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/smart_sample?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    druid:
+      filters: stat,slf4j
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+
+smart:
+  swagger: #swagger配置信息
+    enable: true
+    base-packages: ${SWAGGER_BASE_PACKAGES:com.smart.sample.module1.server.controller} #路径扫描,支持逗号分隔，不支持*模糊匹配
+    title: smart-sample
+    description: smart-sample描述
+    version: 1.0.0-SNAPSHOT
+    license:
+    licenseUrl:
+    terms-of-service-url:
+    contact:
+      name: smart
+      email:
+      url:
