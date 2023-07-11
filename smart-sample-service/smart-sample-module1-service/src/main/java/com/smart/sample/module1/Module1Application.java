@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan("com.smart.sample.module1.mapper")
 @SpringBootApplication
-public class ModuleApplication {
+public class Module1Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ModuleApplication.class, args);
+        SpringApplication.run(Module1Application.class, args);
     }
 }

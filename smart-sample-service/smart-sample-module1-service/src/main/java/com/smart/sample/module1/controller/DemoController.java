@@ -7,7 +7,7 @@ import com.smart.sample.module1.api.DemoApi;
 import com.smart.sample.module1.api.constant.PathConstant;
 import com.smart.sample.module1.api.dto.DemoDto;
 import com.smart.sample.module1.entity.Demo;
-import com.smart.sample.module1.enums.ExceptionEnum;
+import com.smart.sample.module1.enums.MessageEnum;
 import com.smart.sample.module1.service.DemoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -57,7 +57,7 @@ public class DemoController implements DemoApi {
     @PutMapping
     public Result update(@RequestBody @Validated Demo entity) {
         if (entity.getId() == null) {
-            throw new ApplicationException(ExceptionEnum.E601);
+            throw new ApplicationException(MessageEnum.M601);
         }
         demoService.updateById(entity);
         return Result.success();
