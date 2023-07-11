@@ -1,5 +1,5 @@
 server:
-  port: 9988
+  port: 8080
 
 logging:
   level:
@@ -8,7 +8,7 @@ logging:
 
 spring:
   application:
-    name: smart-sample-2
+    name: smart-sample
 
   config: #导入模块配置文件,支持多模块逗号分隔
     import: optional:classpath:module1/
