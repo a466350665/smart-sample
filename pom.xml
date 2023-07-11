@@ -18,7 +18,6 @@
         <smart.version>2.0.1-SNAPSHOT</smart.version>
         <spring.cloud.version>2020.0.5</spring.cloud.version>
         <spring.cloud.alibaba.dependencies.version>2021.1</spring.cloud.alibaba.dependencies.version>
-        <spring.cloud.openfeign.version>3.0.6</spring.cloud.openfeign.version>
         <mysql.version>8.0.28</mysql.version>
     </properties>
 
