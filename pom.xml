@@ -72,12 +72,12 @@
             </dependency>
             <dependency>
                 <groupId>com.smart</groupId>
-                <artifactId>smart-sample-module1-service</artifactId>
+                <artifactId>smart-sample-module1</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.smart</groupId>
-                <artifactId>smart-sample-module2-service</artifactId>
+                <artifactId>smart-sample-module2</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

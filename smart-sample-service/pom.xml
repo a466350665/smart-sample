@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>smart-sample-module1-service</module>
-        <module>smart-sample-module2-service</module>
+        <module>smart-sample-module1</module>
+        <module>smart-sample-module2</module>
     </modules>
 </project>

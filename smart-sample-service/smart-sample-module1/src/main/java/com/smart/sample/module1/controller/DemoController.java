@@ -70,7 +70,7 @@ public class DemoController implements DemoApi {
         return Result.success();
     }
 
-    @ApiOperation(value = "列表", hidden = true)
+    @ApiOperation(value = "API列表")
     @Override
     public Result<List<DemoDto>> getApiList() {
         return Result.createSuccess(demoService.list().stream().map(t -> {

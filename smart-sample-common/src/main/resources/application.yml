@@ -10,11 +10,15 @@ spring:
   application:
     name: smart-sample
 
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
   config: #导入模块配置文件,支持多模块逗号分隔
-    import: optional:classpath:module1/
+    import: optional:classpath:module1/,optional:classpath:module2/
 
   messages: #国际化文件目录,支持多模块逗号分隔
-    basename: i18n/messages,module1/i18n/messages
+    basename: i18n/messages,module1/i18n/messages,module2/i18n/messages
 
   datasource: #数据库连接(可选，统一使用动态数据源方式)
     type: com.alibaba.druid.pool.DruidDataSource
@@ -37,7 +41,7 @@ spring:
 smart:
   swagger: #swagger配置信息
     enable: true
-    base-packages: com.smart.sample.module1.server.controller #路径扫描,支持逗号分隔，不支持*模糊匹配
+    base-packages: com.smart.sample.module1.controller #路径扫描,支持逗号分隔，不支持*模糊匹配
     title: smart-sample
     description: smart-sample描述
     version: 2.0.0-SNAPSHOT

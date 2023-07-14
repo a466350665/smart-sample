@@ -17,13 +17,13 @@
         <!-- 业务模块1(可选)-->
         <dependency>
             <groupId>com.smart</groupId>
-            <artifactId>smart-sample-module1-service</artifactId>
+            <artifactId>smart-sample-module1</artifactId>
         </dependency>
 
         <!-- 业务模块2(可选)-->
         <dependency>
             <groupId>com.smart</groupId>
-            <artifactId>smart-sample-module2-service</artifactId>
+            <artifactId>smart-sample-module2</artifactId>
         </dependency>
     </dependencies>
 
