@@ -98,7 +98,7 @@ String content = com.smart.core.entity.Message.get("603", param0, param1);
 ### 7.启动方式
 
 #### 7.1 单体启动验证
-参考[快速开始](https://github.com/a466350665/smart#4%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
+参考[快速开始](https://github.com/a466350665/smart-sample#4%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
 
 #### 7.2 微服务启动验证
 因Module2需要完成对Module1基于Feign远程调用，首先准备作为注册中心的Nacos。
