@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Api(tags = {"基础增删查改样例演示"})
+@Api(tags = {"基础增删查改示例"})
 @RequestMapping(PathConstant.DEMO)
 @RestController
 public class DemoController implements DemoApi {
