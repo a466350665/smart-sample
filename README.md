@@ -21,7 +21,7 @@ smart-sample                                应用名称
 ### 4.快速开始
 
 #### 4.1 Mysql库创建及初始化
-创建库名为smart_sample的数据库，执行初始化SQL文件，并修改数据库连接信息
+创建库名为smart_sample的数据库，在项目根目录下找到并执行初始化SQL文件init.sql，并修改数据库连接信息
 
 ![](./image/20.png)
 
