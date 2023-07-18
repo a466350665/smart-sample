@@ -23,11 +23,12 @@ smart-sample                                应用名称
 | 技术                   | 版本    | 说明             |
 | ---------------------- | ------- | ---------------- |
 | spring-boot             | 2.5.13   | 容器+MVC框架     |
-| spring-cloud-openfeign | 3.0.6   | 远程调用     |
 | mybatis                | 3.5.10   | ORM框架          |
 | mybatis-plus           | 3.5.2   | MyBatis增强工具  |
 | hibernate-validator    | 6.2.3.Final   | 校验  |
-| springfox-swagger      | 3.0.0   | 文档     |
+| swagger      | 3.0.0   | 文档     |
+| spring-cloud-starter-openfeign | 3.0.6   | 远程调用     |
+| spring-cloud-starter-alibaba-nacos-discovery | 2021.1   | 服务注册     |
 | druid                  | 1.2.8   | 数据库连接池     |
 | mysql                  | 5.7   | 数据库     |
 
