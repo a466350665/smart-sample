@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.smart</groupId>
         <artifactId>smart-sample-service</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <artifactId>smart-sample-module2</artifactId>
     <packaging>jar</packaging>
@@ -20,7 +20,7 @@
             <groupId>com.smart</groupId>
             <artifactId>smart-sample-module1-api</artifactId>
         </dependency>
-        <!-- feign调用方和本地路由(可选)
+        <!-- feign调用方和本地路由(可选)  -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -29,6 +29,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
-         -->
+
     </dependencies>
 </project>

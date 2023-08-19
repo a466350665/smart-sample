@@ -4,21 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.13</version>
-        <relativePath/>
+        <groupId>com.smart</groupId>
+        <artifactId>smart</artifactId>
+        <version>2.0.3-SNAPSHOT</version>
     </parent>
-    <groupId>com.smart</groupId>
     <artifactId>smart-sample</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
-        <smart.version>2.0.1-SNAPSHOT</smart.version>
-        <spring.cloud.version>2020.0.5</spring.cloud.version>
-        <spring.cloud.alibaba.dependencies.version>2021.1</spring.cloud.alibaba.dependencies.version>
-        <mysql.version>8.0.28</mysql.version>
+        <revision>1.0.1-SNAPSHOT</revision>
     </properties>
 
     <modules>
@@ -30,60 +25,26 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Cloud Dependencies Management -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring.cloud.alibaba.dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- smart -->
-            <dependency>
-                <groupId>com.smart</groupId>
-                <artifactId>smart-core</artifactId>
-                <version>${smart.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.smart</groupId>
-                <artifactId>smart-starter-web-mybatisplus</artifactId>
-                <version>${smart.version}</version>
-            </dependency>
-
             <!-- smart-sample -->
             <dependency>
                 <groupId>com.smart</groupId>
                 <artifactId>smart-sample-common</artifactId>
-                <version>${project.version}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.smart</groupId>
                 <artifactId>smart-sample-module1-api</artifactId>
-                <version>${project.version}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.smart</groupId>
                 <artifactId>smart-sample-module1</artifactId>
-                <version>${project.version}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.smart</groupId>
                 <artifactId>smart-sample-module2</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
